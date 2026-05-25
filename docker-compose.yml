@@ -1,0 +1,10 @@
+services:
+  tracer:
+    build: .
+    privileged: true
+    volumes:
+      - /lib/modules:/lib/modules:ro
+      - /usr/src:/usr/src:ro
+      - /sys/kernel/debug:/sys/kernel/debug
+    stdin_open: true
+    tty: true
